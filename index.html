@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فلسطين - قصص من التاريخ والصمود</title>
+    <meta name="description" content="موقع شامل لعرض قصص القضية الفلسطينية وأبطالها بالتفصيل من 1948 حتى اليوم">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-lg transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="w-12 h-12 bg-gradient-to-br from-red-600 via-black to-green-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-flag text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800 font-amiri">فلسطين</h1>
+                        <p class="text-xs text-gray-600">قصص من الصمود</p>
+                    </div>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-green-600 transition">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                
+                <div id="nav-menu" class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-green-600 font-semibold transition-all duration-300 border-b-2 border-transparent hover:border-green-600">الرئيسية</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-green-600 font-semibold transition-all duration-300 border-b-2 border-transparent hover:border-green-600">عن فلسطين</a>
+                    <a href="#heroes" class="nav-link text-gray-700 hover:text-green-600 font-semibold transition-all duration-300 border-b-2 border-transparent hover:border-green-600">الأبطال</a>
+                    <a href="#stories" class="nav-link text-gray-700 hover:text-green-600 font-semibold transition-all duration-300 border-b-2 border-transparent hover:border-green-600">القصص</a>
+                    <a href="#timeline" class="nav-link text-gray-700 hover:text-green-600 font-semibold transition-all duration-300 border-b-2 border-transparent hover:border-green-600">التاريخ</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-nav" class="hidden md:hidden pb-4 space-y-2">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 px-4 rounded transition">الرئيسية</a>
+                <a href="#about" class="block py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 px-4 rounded transition">عن فلسطين</a>
+                <a href="#heroes" class="block py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 px-4 rounded transition">الأبطال</a>
+                <a href="#stories" class="block py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 px-4 rounded transition">القصص</a>
+                <a href="#timeline" class="block py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 px-4 rounded transition">التاريخ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-900 via-black to-red-900 opacity-90"></div>
+        <div class="absolute inset-0 hero-pattern"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center text-white animate-fade-in-up">
+                <div class="mb-8">
+                    <div class="inline-block p-4 bg-white/10 backdrop-blur-md rounded-full mb-6">
+                        <i class="fas fa-mosque text-6xl"></i>
+                    </div>
+                </div>
+                <h2 class="text-6xl md:text-7xl font-bold mb-6 font-amiri leading-tight">
+                    فلسطين
+                    <span class="block text-4xl md:text-5xl mt-2 text-green-400">قضية شعب وأرض</span>
+                </h2>
+                <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed text-gray-200">
+                    رحلة عبر 75 عاماً من التاريخ والصمود، نروي قصص الأبطال والشهداء، ونوثق الأحداث من النكبة حتى يومنا هذا
+                </p>
+                
+                <div class="flex flex-wrap justify-center gap-6 mb-12">
+                    <a href="#stories" class="btn-primary">
+                        <i class="fas fa-book-open ml-2"></i>
+                        اقرأ القصص
+                    </a>
+                    <a href="#heroes" class="btn-secondary">
+                        <i class="fas fa-star ml-2"></i>
+                        تعرف على الأبطال
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
+                    <div class="stats-card">
+                        <div class="stats-counter" data-target="75">0</div>
+                        <p class="stats-label">عاماً من النضال</p>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-counter" data-target="18">0</div>
+                        <p class="stats-label">بطل ومناضل</p>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-counter" data-target="16">0</div>
+                        <p class="stats-label">حدث تاريخي</p>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-counter" data-target="6">0</div>
+                        <p class="stats-label">قصة مفصلة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-white text-3xl hover:text-green-400 transition">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Palestine Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="section-title">
+                    <i class="fas fa-map-marked-alt text-green-600 ml-3"></i>
+                    عن فلسطين
+                </h2>
+                <p class="section-subtitle">أرض الرسالات السماوية وموطن الصمود</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div class="animate-slide-right">
+                    <h3 class="text-3xl md:text-4xl font-bold mb-6 text-green-700 font-amiri">قلب الشرق الأوسط</h3>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                        فلسطين أرض مباركة، ذُكرت في القرآن الكريم وحظيت بمكانة دينية وتاريخية عظيمة. تقع في قلب الشرق الأوسط، تربط بين آسيا وأفريقيا، وكانت على مر العصور ملتقى الحضارات ومهد الديانات السماوية.
+                    </p>
+                    <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                        هي أرض القدس الشريف، أولى القبلتين وثالث الحرمين الشريفين، وموطن المسجد الأقصى المبارك. شهدت فلسطين عبر تاريخها الطويل العديد من الحضارات، لكن ظل شعبها صامداً متمسكاً بأرضه وهويته.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="badge-info">
+                            <i class="fas fa-map-marker-alt ml-2"></i>
+                            27,009 كم²
+                        </span>
+                        <span class="badge-info">
+                            <i class="fas fa-users ml-2"></i>
+                            14 مليون فلسطيني
+                        </span>
+                        <span class="badge-info">
+                            <i class="fas fa-calendar ml-2"></i>
+                            آلاف السنين من التاريخ
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4 animate-slide-left">
+                    <div class="feature-card bg-gradient-to-br from-green-500 to-green-600">
+                        <i class="fas fa-city text-5xl mb-4 text-white"></i>
+                        <h4 class="text-xl font-bold mb-2 text-white">المدن التاريخية</h4>
+                        <p class="text-green-50">القدس، الخليل، نابلس، غزة، يافا، حيفا، عكا</p>
+                    </div>
+                    <div class="feature-card bg-gradient-to-br from-red-500 to-red-600">
+                        <i class="fas fa-mosque text-5xl mb-4 text-white"></i>
+                        <h4 class="text-xl font-bold mb-2 text-white">المقدسات</h4>
+                        <p class="text-red-50">المسجد الأقصى، قبة الصخرة، الحرم الإبراهيمي</p>
+                    </div>
+                    <div class="feature-card bg-gradient-to-br from-blue-500 to-blue-600">
+                        <i class="fas fa-landmark text-5xl mb-4 text-white"></i>
+                        <h4 class="text-xl font-bold mb-2 text-white">الحضارة</h4>
+                        <p class="text-blue-50">كنعانية، رومانية، إسلامية، عثمانية</p>
+                    </div>
+                    <div class="feature-card bg-gradient-to-br from-purple-500 to-purple-600">
+                        <i class="fas fa-heart text-5xl mb-4 text-white"></i>
+                        <h4 class="text-xl font-bold mb-2 text-white">الهوية</h4>
+                        <p class="text-purple-50">شعب عريق متمسك بأرضه وتاريخه</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heroes Section -->
+    <section id="heroes" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="section-title">
+                    <i class="fas fa-star text-yellow-500 ml-3"></i>
+                    أبطال القضية الفلسطينية
+                </h2>
+                <p class="section-subtitle">رجال ونساء خلدهم التاريخ بصمودهم وتضحياتهم</p>
+            </div>
+            
+            <div class="mb-12 flex justify-center">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">
+                        <i class="fas fa-th ml-2"></i>
+                        الكل
+                    </button>
+                    <button class="filter-btn" data-category="قائد">
+                        <i class="fas fa-crown ml-2"></i>
+                        القادة
+                    </button>
+                    <button class="filter-btn" data-category="مناضل">
+                        <i class="fas fa-fist-raised ml-2"></i>
+                        المناضلون
+                    </button>
+                    <button class="filter-btn" data-category="شهيد">
+                        <i class="fas fa-dove ml-2"></i>
+                        الشهداء
+                    </button>
+                    <button class="filter-btn" data-category="شاعر">
+                        <i class="fas fa-pen-fancy ml-2"></i>
+                        الشعراء
+                    </button>
+                </div>
+            </div>
+            
+            <div id="heroes-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Heroes will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Stories Section - NEW EXPANDED -->
+    <section id="stories" class="py-20 bg-gradient-to-br from-green-50 via-white to-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="section-title">
+                    <i class="fas fa-book-open text-green-600 ml-3"></i>
+                    قصص من الصمود والبطولة
+                </h2>
+                <p class="section-subtitle">قصص حقيقية من 1948 حتى يومنا هذا</p>
+            </div>
+            
+            <div class="mb-12 flex flex-wrap justify-center gap-3">
+                <button class="story-filter-btn active" data-filter="all">
+                    <i class="fas fa-list ml-2"></i>
+                    جميع القصص
+                </button>
+                <button class="story-filter-btn" data-filter="النكبة">
+                    <i class="fas fa-home ml-2"></i>
+                    النكبة
+                </button>
+                <button class="story-filter-btn" data-filter="الانتفاضة">
+                    <i class="fas fa-hand-rock ml-2"></i>
+                    الانتفاضة
+                </button>
+                <button class="story-filter-btn" data-filter="الحصار">
+                    <i class="fas fa-shield-alt ml-2"></i>
+                    الحصار
+                </button>
+                <button class="story-filter-btn" data-filter="المقاومة">
+                    <i class="fas fa-flag ml-2"></i>
+                    المقاومة
+                </button>
+                <button class="story-filter-btn" data-filter="الصمود">
+                    <i class="fas fa-tree ml-2"></i>
+                    الصمود
+                </button>
+            </div>
+            
+            <div id="stories-container" class="space-y-8">
+                <!-- Stories will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="section-title">
+                    <i class="fas fa-history text-green-600 ml-3"></i>
+                    الخط الزمني للأحداث التاريخية
+                </h2>
+                <p class="section-subtitle">من وعد بلفور 1917 حتى طوفان الأقصى 2023</p>
+            </div>
+            
+            <div class="mb-12 max-w-2xl mx-auto">
+                <div class="relative">
+                    <input 
+                        type="text" 
+                        id="timeline-search" 
+                        placeholder="ابحث في الأحداث التاريخية..."
+                        class="search-input"
+                    >
+                    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                </div>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div id="timeline-container" class="relative timeline-wrapper">
+                    <!-- Timeline events will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 space-x-reverse mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-red-600 via-black to-green-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-flag text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold font-amiri">فلسطين</h3>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        موقع شامل لعرض قصص القضية الفلسطينية وأبطالها بالتفصيل، للحفاظ على الذاكرة الجماعية ونقل الحقيقة للأجيال القادمة.
+                    </p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-amiri">روابط سريعة</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="footer-link">الرئيسية</a></li>
+                        <li><a href="#about" class="footer-link">عن فلسطين</a></li>
+                        <li><a href="#heroes" class="footer-link">الأبطال</a></li>
+                        <li><a href="#stories" class="footer-link">القصص</a></li>
+                        <li><a href="#timeline" class="footer-link">التاريخ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-amiri">إحصائيات</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-check text-green-500 ml-2"></i> 13 بطلاً وشهيداً</li>
+                        <li><i class="fas fa-check text-green-500 ml-2"></i> 16 حدثاً تاريخياً</li>
+                        <li><i class="fas fa-check text-green-500 ml-2"></i> 6 قصص مفصلة</li>
+                        <li><i class="fas fa-check text-green-500 ml-2"></i> 75 عاماً من التوثيق</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400 mb-2">&copy; 2024 فلسطين - قصص من الصمود. جميع الحقوق محفوظة.</p>
+                <p class="text-xl font-bold text-green-400 font-amiri">🇵🇸 فلسطين حرة من النهر إلى البحر 🇵🇸</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Story Modal -->
+    <div id="story-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-story-title" class="text-2xl md:text-3xl font-bold"></h3>
+                <button onclick="closeStoryModal()" class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="modal-story-content" class="modal-body">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Modal -->
+    <div id="hero-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header bg-green-600">
+                <h3 id="modal-hero-title" class="text-2xl md:text-3xl font-bold text-white"></h3>
+                <button onclick="closeHeroModal()" class="modal-close text-white">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="modal-hero-content" class="modal-body">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
